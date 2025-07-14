@@ -15,7 +15,7 @@ function* fetchDataSaga() {
   try {
     yield put(setLoading(true));
 
-    yield delay(500);
+    yield delay(1000);
 
     const response: AxiosResponse<IData[]> = yield call(
       axios.get,
