@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import formatPhoneNumber from "../utils/formatPhoneNumber";
+
 import type { IModal } from "../interfaces/modal.types";
 
 import {
@@ -38,7 +40,7 @@ export default class Modal extends Component<IModal> {
                 <SectionTitle>Contact</SectionTitle>
                 <DataItem>
                   <DataLabel>Phone:</DataLabel>
-                  <DataValue>{this.props.data.phone}</DataValue>
+                  <DataValue>{formatPhoneNumber(this.props.data.phone)}</DataValue>
                 </DataItem>
                 <DataItem>
                   <DataLabel>Email:</DataLabel>

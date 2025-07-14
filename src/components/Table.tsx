@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { BsStar, BsStarFill } from "react-icons/bs";
 
+import formatPhoneNumber from "../utils/formatPhoneNumber";
+
 import type { ITable } from "../interfaces/table.types";
 
 import {
@@ -37,7 +39,7 @@ export default class Table extends Component<ITable> {
             <TableRow key={index}>
               <TableCell onClick={() => this.props.openModal(item.id)}>{item.name}</TableCell>
               <TableCell onClick={() => this.props.openModal(item.id)}>{item.email}</TableCell>
-              <TableCell onClick={() => this.props.openModal(item.id)}>{item.phone}</TableCell>
+              <TableCell onClick={() => this.props.openModal(item.id)}>{formatPhoneNumber(item.phone)}</TableCell>
               <TableCell>
                 <Button
                   withIcon
